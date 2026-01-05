@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:text="X"
         android:textColor="#3E3C3C"
-        android:textSize="50dp" />
+        android:textSize="30dp" />
 
 </LinearLayout>
     <LinearLayout
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:text="Review"
             android:textColor="#3E3C3C"
-            android:textSize="50dp" />
+            android:textSize="40dp" />
 
     </LinearLayout>
     <LinearLayout
