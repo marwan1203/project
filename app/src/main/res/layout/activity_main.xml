@@ -9,7 +9,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/siteName"
         android:layout_width="216dp"
         android:layout_height="50dp"
         android:text="Site Name"
@@ -41,7 +41,7 @@
             android:layout_height="80dp"
 
             android:layout_marginLeft="10dp"
-            android:id="@+id/spinner" />
+            android:id="@+id/storeType" />
 
     </LinearLayout>
   <LinearLayout
@@ -51,7 +51,7 @@
       android:layout_marginTop="30dp"
       android:layout_marginLeft="10dp">
       <TextView
-          android:id="@+id/reviewText"
+          android:id="@+id/enterView"
           android:layout_width="wrap_content"
           android:layout_height="36dp"
           android:text="Enter Review"
@@ -77,7 +77,7 @@
     <Button
         android:layout_width="190dp"
         android:layout_height="50dp"
-        android:id="@+id/TakePic"
+        android:id="@+id/takePic"
         android:text="Take Photo"
         android:backgroundTint="#414FA0"
         android:textSize="20dp">
@@ -100,5 +100,6 @@
         android:text="Submit"
         android:backgroundTint="#414FA0"
         android:textSize="20dp">
+    </Button>
 
 </LinearLayout>
