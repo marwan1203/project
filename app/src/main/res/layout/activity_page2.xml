@@ -1,10 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".page2">
+    tools:context=".page2"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:text="Site Visit Recorder"
+        android:textSize="40dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="#3F51B5">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/storeType"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Store Type"
+            android:textColor="#3F51B5"
+            android:textSize="23dp">
+
+        </TextView>
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:textColor="#3E3C3C"
+        android:textSize="50dp" />
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp">
+
+
+
+        <TextView
+            android:id="@+id/reviewtext"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Visit details:"
+            android:textColor="#3F51B5"
+            android:textSize="23dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Review"
+            android:textColor="#3E3C3C"
+            android:textSize="50dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            tools:srcCompat="@tools:sample/avatars" />
+        <Button
+            android:id="@+id/back"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="40dp"
+            android:text="Back"
+            android:textSize="30dp">
+
+        </Button>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
@@ -25,6 +26,7 @@ private Button submit,takePic;
 private Spinner storeType;
 private EditText review;
 private ImageView img;
+private Bitmap bitmap;
 
 
     @Override
@@ -58,8 +60,18 @@ private ImageView img;
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            if(!siteName.getText().toString().isEmpty()&&!enterView.getText().toString().isEmpty()&&!siteType.getText().toString().isEmpty()){
-                sendData();
+            if(!siteName.getText().toString().isEmpty()&&!review.getText().toString().isEmpty()&&!storeType.getSelectedItem().toString().isEmpty()){
+                Intent page2 = new Intent(MainActivity.this, page2.class);
+                String reviewExtra = review.getText().toString();
+                String TypeExtra = storeType.getSelectedItem().toString();
+                page2.putExtra("REVIEW",reviewExtra);
+                page2.putExtra("STORETYPE",TypeExtra);
+                page2.putExtra("img",bitmap);
+                startActivity(page2);
+            }
+            else{
+                Toast.makeText(MainActivity.this, "Please fill all required fields", Toast.LENGTH_SHORT).show();
+
             }
             }
 
@@ -69,18 +81,11 @@ private ImageView img;
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==0&&resultCode==RESULT_OK){
-            Bitmap bitmap=(Bitmap)data.getExtras().get("data");
+             bitmap=(Bitmap)data.getExtras().get("data");
             img.setImageBitmap(bitmap);
         }
 }
-    public void sendData(){
-        Intent page2 = new Intent(this, page2.class);
-        String view = enterView.getText().toString();
-        String Type = storeType.getSelectedItem().toString();
-        page2.putExtra("review",view);
-        page2.putExtra("storetype",Type);
-        startActivity(page2);
-    }
+
 
 
 
